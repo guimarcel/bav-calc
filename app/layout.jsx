@@ -1,5 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import GoogleAd1 from "./components/ads/GoogleAd1";
+import Script from "next/script";
 
 export const metadata = {
   title: "Welcome to Baskhara Calculator",
@@ -9,8 +11,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className="">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8664858641724509"
+          crossorigin="anonymous"
+        ></Script>
+      </head>
       <body className="min-h-screen flex flex-col">
         <Navbar />
+
+        <GoogleAd1 />
+
         <div className="flex-grow bg-slate-200 flex">
           <div className="container mx-auto bg-white min-h-[100%] shadow-md shadow-slate-300">
             {children}

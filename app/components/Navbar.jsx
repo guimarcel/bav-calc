@@ -21,9 +21,9 @@ function Navbar() {
       <div className="py-2 bg-blue-1 flex flex-col justify-center items-center text-bege-1">
         <Logo></Logo>
       </div>
-      <div className="flex overflow-x-auto divide-x-2 justify-center items-center py-1">
+      <div className="flex overflow-x-auto divide-x-2 justify-center items-center py-1 bg-blue-2">
         {menuItems.map((menu, key) => (
-          <a className="px-4" href={menu.href} key={key}>
+          <a className="px-4 text-gray-1 hover:font-bold hover:scale-105 hover:text-bege-1 transition-all" href={menu.href} key={key}>
             {menu.name}
           </a>
         ))}
